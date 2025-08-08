@@ -37,6 +37,7 @@ public class ShoppingCart {
      * สร้างตะกร้าสินค้า
      * @param pricingService service สำหรับคำนวณราคา
      * @param productCatalog service สำหรับค้นหาสินค้า
+     * @throws ProductNotFoundException หายไม่พบสิ้นค้าในแคตตาล็อกอีก
      */
     public ShoppingCart(PricingService pricingService, ProductCatalog productCatalog) {
         this.items = new ArrayList<>();
@@ -111,4 +112,5 @@ public class ShoppingCart {
         items.clear();
         checkRep(); // ตรวจสอบหลังการเปลี่ยนแปลง
     }
+
 }
